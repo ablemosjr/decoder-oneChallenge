@@ -6,12 +6,54 @@
 
   <link rel="stylesheet" href="./assets/css/styles.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/logo.svg">
+
   <title>Decodificador | ONE</title>
 </head>
 <body>
-  <header>
+  <header class="header">
     <img src="./assets/images/logo.svg" alt="Decoder Challenge Logo - Alura">
   </header>
+
+  <main class="wrapper">
+    <section class="decoder">
+      <textarea 
+        name="textarea" 
+        class="decoder__textArea"
+        id="textDecoder"
+        placeholder="Digite seu texto..."
+      ></textarea>
+
+      <span class="decoder__alert">Apenas letras minúsculas e sem acento.</span>
+      <div class="decoder__actions">
+        <button class="btn btn--colored">Criptografar</button>
+        <button class="btn btn--transparent">Descriptografar</button>
+      </div>
+    </section>
+
+    <section class="decodedArea">
+      <img class="decodedArea__image" src="./assets/images/hero-image.svg" alt="Hero image">
+      
+      <p class="decodedArea__void">
+        Nenhuma mensagem encontrada
+      </p>
+      <h1 class="decodedArea__description">
+        Digite um texto que você deseja criptografar ou descriptografar.
+      </h1>
+    </section>
+
+    <!-- <section class="decodedArea">     
+      <p class="decodedArea__response">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde voluptas ad velit? Asperiores totam tenetur modi quibusdam corrupti molestias repudiandae mollitia, atque vitae exercitationem harum laudantium eum nostrum quidem cum.
+      </p>
+
+      <button class="btn btn--transparent">Copiar</button>
+    </section> -->
+  </main>
   
   <script src="./assets/js/main.js"></script>
 </body>
