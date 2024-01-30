@@ -154,6 +154,8 @@ button:hover {
   line-height: 36px;
   color: #495057;
   margin-bottom: 30px;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .footer {
@@ -277,6 +279,8 @@ button:hover {
   .decodedArea--returned {
     justify-content: space-between;
     height: max-content;
+    text-align: left;
+    min-height: calc(580px + 25vh);
   }
 
   .decodedArea__image {
