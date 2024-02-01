@@ -21,7 +21,7 @@ const Views = {
     return `   
       <p class="decodedArea__response">${text}</p>
   
-      <button class="btn btn--transparent">Copiar</button>
+      <button onclick="copyText()" class="btn btn--transparent">Copiar</button>
     `;
   }
 }
@@ -50,6 +50,8 @@ function cryptograph() {
     decodedArea.classList.add('decodedArea--returned');
     decodedArea.innerHTML = Views.DecodedAreaReturned(newText);
   }
+
+  receivedText.value = '';
 }
 
 function descriptograph() {
@@ -75,6 +77,17 @@ function descriptograph() {
     decodedArea.classList.add('decodedArea--returned');
     decodedArea.innerHTML = Views.DecodedAreaReturned(newText);
   }
+
+  receivedText.value = '';
+}
+
+function copyText() {
+  const textAreaResponse = document.querySelector('.decodedArea__response');
+  const textToCopy = textAreaResponse.textContent;
+
+  navigator.clipboard.writeText(textToCopy);
+  
+  alert('Texto copiado com sucesso!');
 }
 
 buttonCryptograph.addEventListener('click', () => {
